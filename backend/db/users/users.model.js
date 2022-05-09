@@ -26,6 +26,18 @@ module.exports = {
       .first();
   },
 
+  getByUserName(userName) {
+    return knex
+      .select({
+        id: "id",
+        userId: "userId",
+        startDate: "startDate",
+      })
+      .from(usersTable)
+      .where({ userId: userName })
+      .first();
+  },
+
   create(user) {
     // validation
 
