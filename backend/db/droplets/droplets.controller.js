@@ -1,27 +1,27 @@
 const dropletsModel = require("./droplets.model");
 
 module.exports = {
-  async buckets(req, res) {
-    const buckets = await dropletsModel.getAll();
-    res.send(buckets);
+  async droplets(req, res) {
+    const droplets = await dropletsModel.getAll();
+    res.send(droplets);
   },
 
-  async bucket(req, res) {
+  async droplet(req, res) {
     const id = parseInt(req.params.id);
-    const bucket = await dropletsModel.getById(id);
-    res.send(bucket);
+    const droplets = await dropletsModel.getById(id);
+    res.send(droplets);
   },
 
   async saveNew(req, res) {
     const { userId, dropName, dropDescription, bucketId } = req.body;
-    const bucketObj = {
+    const dropletsObj = {
       userId: userId,
       dropName: dropName,
       dropDescription: dropDescription,
       bucketId: bucketId,
     };
 
-    await dropletsModel.create(bucketObj);
+    await dropletsModel.create(dropletsObj);
 
     const savedDroplet = await dropletsModel.getByDropletName(dropName);
 
@@ -40,7 +40,7 @@ module.exports = {
       bucketId,
       totalTime,
     } = req.body;
-    const bucketObj = {
+    const dropletObj = {
       userId: userId,
       dropName: dropName,
       dropDescription: dropDescription,
@@ -51,7 +51,7 @@ module.exports = {
       totalTime: totalTime,
     };
 
-    await dropletsModel.update(id, bucketObj);
+    await dropletsModel.update(id, dropletObj);
 
     const updatedDroplet = await dropletsModel.getById(id);
 
