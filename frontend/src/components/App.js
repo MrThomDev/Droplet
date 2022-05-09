@@ -5,8 +5,8 @@ import Navbar from "./Navbar.js";
 function App() {
   return (
     <>
-      <div>hello</div>
       <Navbar />
+      <div>This is where the main content will go</div>
     </>
   );
 }

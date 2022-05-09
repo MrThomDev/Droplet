@@ -1,7 +1,7 @@
 import "./App.js";
 
 function Navbar() {
-  return <div>Person!</div>;
+  return <div>This is where the navbar will go</div>;
 }
 
 export default Navbar;
