@@ -41,6 +41,18 @@ module.exports = {
       .first();
   },
 
+  getAllUserBuckets(userId) {
+    return knex
+      .select({
+        id: "id",
+        userId: "userId",
+        bucketName: "bucketName",
+        bucketDescription: "bucketDescription",
+      })
+      .from(bucketsTable)
+      .where({ userId: userId });
+  },
+
   create(bucket) {
     // validation
 

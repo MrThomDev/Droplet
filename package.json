@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon backend/server.js",
     "migrate": "npx knex migrate:latest",
-    "seed": "npx knex seed:run"
+    "seed": "npx knex seed:run",
+    "build": "cd ./frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",

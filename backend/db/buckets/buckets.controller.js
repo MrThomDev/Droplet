@@ -12,6 +12,12 @@ module.exports = {
     res.send(bucket);
   },
 
+  async userBuckets(req, res) {
+    const id = parseInt(req.params.id);
+    const buckets = await bucketsModel.getAllUserBuckets(id);
+    res.send(buckets);
+  },
+
   async save(req, res) {
     const { id, userId, bucketName, bucketDescription } = req.body;
 
