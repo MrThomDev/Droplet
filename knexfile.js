@@ -18,8 +18,8 @@ module.exports = {
       ssl: { rejectUnauthorized: false },
     },
     migrations: {
-      directory: "./server/db/migrations",
+      directory: "./backend/db/migrations",
     },
-    seeds: { directory: "./server/db/seeds" },
+    seeds: { directory: "./backend/db/seeds" },
   },
 };
