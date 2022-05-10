@@ -19,7 +19,7 @@ function App() {
   const [droplets, setDroplets] = useState([]);
 
   //Global Variables
-  const url = "http://localhost:8080";
+  const url = "https://thom-droplet.herokuapp.com";
 
   //Bucket functions
   const getUserBuckets = async () => {
