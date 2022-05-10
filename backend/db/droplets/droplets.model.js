@@ -38,6 +38,23 @@ module.exports = {
       .first();
   },
 
+  getAllUserDroplets(userId) {
+    return knex
+      .select({
+        id: "id",
+        userId: "userId",
+        dropName: "dropName",
+        dropDescription: "dropDescription",
+        dropStart: "dropStart",
+        dropEnd: "dropEnd",
+        status: "status",
+        bucketId: "bucketId",
+        totalTime: "totalTime",
+      })
+      .from(dropletsTable)
+      .where({ userId: userId });
+  },
+
   getByDropletName(name) {
     return knex
       .select({

@@ -12,6 +12,12 @@ module.exports = {
     res.send(droplets);
   },
 
+  async userDroplets(req, res) {
+    const id = parseInt(req.params.id);
+    const droplets = await dropletsModel.getAllUserDroplets(id);
+    res.send(droplets);
+  },
+
   async saveNew(req, res) {
     const { userId, dropName, dropDescription, bucketId } = req.body;
     const dropletsObj = {

@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get("/users", users.users);
 app.get("/users/:id", users.user);
 app.get("/user/buckets/:id", buckets.userBuckets);
+app.get("/user/droplets/:id", droplets.userDroplets);
 app.post("/users/save", users.save);
 app.post("users", users.save);
 
