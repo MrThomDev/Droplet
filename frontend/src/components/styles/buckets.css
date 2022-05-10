@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto+Mono:ital,wght@1,200&display=swap");
+
+.buckets {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(45, 45, 45);
+}
+
+.bucketItem {
+  padding: 1% 4% 1% 4%;
+  display: flex;
+  margin: 2%;
+  border-style: solid;
+  align-items: flex-start;
+}
+
+.bucketName {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  width: 5%;
+  font-family: "Roboto Mono", monospace;
+}
+
+.bucketDescription {
+  margin: 0 5% 0 5%;
+  color: orange;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  width: 95%;
+}

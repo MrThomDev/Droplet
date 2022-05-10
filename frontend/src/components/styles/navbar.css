@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto+Mono:ital,wght@1,200&display=swap");
+
+.navBar {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  background-color: rgb(47, 47, 47);
+  padding: 2% 0 2% 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+  font-size: x-large;
+  font-family: "Montserrat", sans-serif;
+  margin: 2%;
+  padding: 0.5%;
+  text-align: center;
+  color: aliceblue;
+}
+
+li:hover {
+  background-color: rgb(70, 72, 73);
+}

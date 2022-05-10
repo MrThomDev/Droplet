@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto+Mono:ital,wght@1,200&display=swap");
+
+.droplets {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(47, 47, 54);
+}
+
+.dropletItem {
+  padding: 1%;
+  display: flex;
+  margin: 2%;
+  border-style: solid;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dropletName {
+  color: white;
+  width: 16.667%;
+  font-weight: bolder;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropletDescription {
+  color: green;
+  width: 16.667%;
+}
+
+.dropletStart {
+  color: rgb(79, 118, 20);
+  width: 16.667%;
+}
+
+.dropletEnd {
+  color: rgb(128, 83, 0);
+  width: 16.667%;
+}
+
+.dropletStatus {
+  color: rgb(198, 205, 0);
+  width: 16.667%;
+}
+
+.dropletTime {
+  color: aliceblue;
+  width: 16.667%;
+}

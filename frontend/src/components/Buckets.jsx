@@ -1,16 +1,13 @@
 // import "./App"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./styles/buckets.css";
 
-function Buckets({ user, buckets }) {
-  //consts
-  const [bucketPreview, setBucketPreview] = useState();
-  //
+function Buckets({ buckets }) {
+  const [bucketHtml, setBucketHtml] = useState([]);
 
-  const bucketHtml = () => {
-    // console.log("17: Buckets Arr: ", bucketsArr);
-    console.log(buckets);
-    const bucketHTML = buckets.map((el, index) => {
+  const buildBucketHtml = () => {
+    const HTML = buckets.map((el, index) => {
       return (
         <div className="bucketItem" key={index}>
           <div className="bucketName">{el.bucketName}</div>
@@ -18,19 +15,18 @@ function Buckets({ user, buckets }) {
         </div>
       );
     });
-    setBucketPreview(bucketHTML);
+    setBucketHtml(HTML);
   };
 
   useEffect(() => {
-    bucketHtml(buckets);
-  }, []);
+    if (buckets.length < 1) {
+      setBucketHtml(<div>No Buckets were loaded</div>);
+    } else {
+      buildBucketHtml();
+    }
+  }, [buckets]);
 
-  return (
-    <div className="buckets" onClick={bucketHtml}>
-      Buckets will go in here.
-      {bucketPreview}
-    </div>
-  );
+  return <div className="buckets">{bucketHtml}</div>;
 }
 
 export default Buckets;
