@@ -8,10 +8,10 @@ const droplets = require("./db/droplets/droplets.controller");
 const app = express();
 //Middleware
 app.use(express.json());
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   next();
+// });
 
 //static files
 app.use(express.static(path.join(__dirname, "../frontend/build")));
